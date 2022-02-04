@@ -1,10 +1,10 @@
 # cse210-03
 Group: John Adeloye, Cait Bair, Tjoe Jannuar Teddy Herjanto Herjanto, and Julieta white
 
-## Jumper Game
+# Jumper Game
 Jumper is a game in which the player seeks to solve a puzzle by guessing the letters of a secret word one at a time. The game is based on Python (This is a learning project).
 
-# Rules
+## Rules
 - Need one player
 - The puzzle is a secret word randomly chosen from a list.
 - The player guesses a letter in the puzzle.
@@ -13,5 +13,8 @@ Jumper is a game in which the player seeks to solve a puzzle by guessing the let
   - If the word puzzle is solved the game is done, you win the game, you can play it again.
   - If the player has no more parachute, the game is over.
 
+## How to start the game?
+- Need updated python
+- Go to main.py and run it
 
-
+Have Fun!
