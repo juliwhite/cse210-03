@@ -28,7 +28,6 @@ class Word:
         else:
             if letter not in self._wrong_guesses:
                 self._wrong_guesses.append(letter)
-                #return(len(self._wrong_guesses))
         #print(len(self._wrong_guesses))
     
     def _get_wrong_guesses(self):
