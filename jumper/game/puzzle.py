@@ -3,6 +3,7 @@ import random
 
 words = ["love", "family", "home", "smile"]
 
+<<<<<<< HEAD
 class Word:
     '''
     This class will direct the game. 
@@ -34,3 +35,18 @@ class Word:
         wrong_words = self._wrong_guesses
         #self._wrong_guesses = len(self._wrong_guesses)
         return len(wrong_words)
+=======
+class Puzzle:
+    """ 
+    This class will generate a secret work from a list. 
+    """
+    def __init__(self) -> None:
+        self._word = random.choice(words) #choose a random word from list words
+
+    def display_parachute(self):
+        parachute = ['''
+            ___''', '''
+            /''',
+        ]
+    
+>>>>>>> 6c25d91ce562d677feb1256e9321e739f93ba194
