@@ -34,3 +34,11 @@ class Word:
         wrong_words = self._wrong_guesses
         #self._wrong_guesses = len(self._wrong_guesses)
         return len(wrong_words)
+
+    def _check_win(self):
+        if '_' not in self._right_guesses:
+            print('Correct!')
+            return 1
+        
+
+    
