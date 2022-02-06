@@ -7,6 +7,7 @@ while play != 'y' and play != 'n':
   print("Sorry, please pick one of the options.")
   play = input("(y/n): ").lower()
 if play == 'y':
+  print(" ")
   print("Wonderful!")
 elif play == 'n':
   print("Sorry to hear that. Press 'enter' to exit.")
@@ -19,6 +20,7 @@ while rules != 'y' and rules != 'n':
   print("Sorry, please pick one of the options.")
   rules = input("(y/n): ").lower()
 if rules == 'y':
+  print(" ")
   print("RULES:")
   print("There is a man (or... jumper) who has leapt out of an airplane, and is now using a parachute to get down.")
   print("Your job is to figure out the secret word by guessing the letters in the word.")
