@@ -29,6 +29,6 @@ if rules == 'y':
   print("If you guess the word before the parachute disappears, you WIN!")
   print("Press 'enter' when you feel you are ready to begin.")
   input(" ")
- elif rules == 'n':
+elif rules == 'n':
   print("Right to it then! Press 'enter' to begin.")
   input(" ")
