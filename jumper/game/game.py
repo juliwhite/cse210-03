@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 from player import Player
 from puzzle import Word
 from parachute import Parachute
@@ -34,14 +33,3 @@ class Game:
     def _do_update(self):
         self._word._check_word(self._player.get_input())
         self._parachute._body(self._word._get_wrong_guesses())
-
-=======
-
-class Game:
-    """
-    This class is in charge of the creation of the Jumper game.
-    It will start the game. 
-    """
-    def __init__(self) -> None:
-        pass
->>>>>>> 6c25d91ce562d677feb1256e9321e739f93ba194
