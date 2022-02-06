@@ -33,5 +33,5 @@ class Game:
     def _do_update(self):
         self._word._check_word(self._player.get_input())
         self._parachute._body(self._word._get_wrong_guesses())
-        if self._word._check_win() == 1:
+        if self._word._check_win() == 1 or self._word._get_wrong_guesses() == 7:
             self._play_game = False

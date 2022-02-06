@@ -11,4 +11,4 @@ class Player:
     
     def set_input(self, letter):
         self._player_input = letter
-        #print(self._player_input + " set")
+    
