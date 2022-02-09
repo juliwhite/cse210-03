@@ -10,5 +10,5 @@ class Player:
         return self._player_input
     
     def set_input(self, letter):
-        self._player_input = letter
+        self._player_input = letter.lower()
     
