@@ -26,7 +26,7 @@ class Game:
 
     def _get_input(self):
         ask_player = input("\nGuess a letter [a-z]: ")
-        print(ask_player.lower())
+        #print(ask_player.lower())
         self._player.set_input(ask_player)
     
     def _do_update(self):
