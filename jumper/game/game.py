@@ -18,7 +18,6 @@ class Game:
             self._do_output()
             self._get_input()
             self._do_update()
-        
 
     def _do_output(self):
         self._word._get_word()
@@ -26,7 +25,6 @@ class Game:
 
     def _get_input(self):
         ask_player = input("\nGuess a letter [a-z]: ")
-        print(ask_player.lower())
         self._player.set_input(ask_player)
     
     def _do_update(self):
