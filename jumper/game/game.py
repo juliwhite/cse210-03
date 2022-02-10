@@ -1,4 +1,3 @@
-
 from player import Player
 from puzzle import Word
 from parachute import Parachute

@@ -1,0 +1,137 @@
+import random
+
+
+class Word:
+    def __init__(self):
+        """
+        This method .....
+        """
+        self.wordlist = ["chess", "poker"]  # , "scrabble", "board", "monopoly", "checkers", "backgammon"]
+
+    def getWord(self):
+        """
+        This method returns a random word from the wordList
+        """
+        # random integer
+        i = random.randint(0, len(self.wordlist) - 1)
+        return self.wordlist[i]
+
+
+class Jumper:
+    def __init__(self):
+        """This method initializes the game figure and parachutes with 5 parts"""
+        self.jumper = ["    ___    ",
+                       "   /___\   ",
+                       "  /     \  ",
+                       "  \     /  ",
+                       "   \ O /   ",
+                       "   /| |\    ",
+                       "    | |    ",
+                       "   // \\\   ",
+                       " _//   \\\_ ",
+                       "^^^^^^^^^^^^",
+                       "\n"]
+        self.retries = 0
+
+    def draw(self):
+        """This method draws the shape (man and the parachute)
+            For loop and print was used because of python escape characters"""
+
+        for line in self.jumper:
+            print(line)
+
+    def fall(self):  # Jumper falls when there is an incorrect input
+        """
+        This method penalizes incorrect guesses by removing a part from the parachute
+        """
+
+        self.jumper = self.jumper[1:]
+        self.retries += 1
+        if self.retries == 5:
+            self.jumper[0] = "     X"
+
+    def isdead(self):  # Jumper is dead when total number of tries have been exhausted
+        return True if self.retries == 5 else False
+
+
+class Game:
+
+    def __init__(self):
+        self.jumper = Jumper()  # Creates an instance of the Jumper
+        self.gameword = Word().getWord()  # This return a random word from the word list
+        self.guessedword = ""
+        # self.startGame()
+        # self.gameboard = Gameboard()
+
+    def startGame(self):
+
+        print("Welcome to Jumper")
+        self.jumper.draw()
+
+        for letter in range(len(self.gameword)):
+            self.guessedword += "-"
+        print(self.guessedword)
+        self.playGame()
+
+    def checkPlayerGuess(self, guess):
+
+        self.isguesscorrect = False
+        self.guess = guess
+
+        """This method scores the player's guess"""
+        for i in range(len(self.gameword)):
+            if self.gameword[i] == self.guess and self.guessedword[i] == "-":
+                self.guessedword = self.guessedword[:i] + self.guess + self.guessedword[i + 1:]
+                self.isguesscorrect = True
+                break  # The break is to stop the loop from running again after finding a correct guess
+
+        print(self.guessedword)
+
+        return self.isguesscorrect
+
+    def playGame(self):
+
+        while not self.gameOver():
+            guess = input("\n Guess a letter [a-z] : ").lower()
+            status = self.checkPlayerGuess(guess)
+            if not status:
+                self.jumper.fall()
+            self.jumper.draw()
+        self.exitGame()
+
+    def gameOver(self):  # Checks for exit condition
+        taskdone = True
+        for letter in range(len(self.guessedword)):  # Checks if all letters have been filled
+            if self.guessedword[letter] == "-":
+                taskdone = False  # task is not done if there is still an unfilled letter
+        if taskdone:  # if the game letters have been filled
+            print("You won!!!")
+            return True
+        #
+        elif self.jumper.isdead():
+            print("Game lost!")
+            return True
+        else:
+            return False
+
+    def exitGame(self):
+        print(f"The correct word is {self.gameword}")
+
+Game().startGame()
+
+
+///class Gameboard:
+    def __init__(self):
+        self.jumper = Jumper()  # Creates an instance of the Jumper
+        self.game = Game()
+
+    def drawboard(self):
+        guess = input().lower()
+        return guess
+
+    def update(self, status):
+        self.status = status
+
+        self.jumper.draw()
+        if not self.status:
+            self.jumper.fall() ///

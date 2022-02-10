@@ -1,4 +1,3 @@
-
 class Player:
     '''
     The player will guess a letter from a-z
