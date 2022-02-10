@@ -1,5 +1,5 @@
 # cse210-03
-Group: John Adeloye, Cait Bair, Tjoe Jannuar Teddy Herjanto Herjanto, and Julieta white
+Group: Julieta white, Tjoe Jannuar Teddy Herjanto, and John Adeloye
 
 # Jumper Game
 Jumper is a game in which the player seeks to solve a puzzle by guessing the letters of a secret word one at a time. The game is based on Python (This is a learning project).
