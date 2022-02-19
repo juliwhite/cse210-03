@@ -1,5 +1,5 @@
 # cse210-03
-Group: John Adeloye, Cait Bair, Tjoe Jannuar Teddy Herjanto Herjanto, and Julieta white
+Group: Julieta white, Tjoe Jannuar Teddy Herjanto, and John Adeloye
 
 # Jumper Game
 Jumper is a game in which the player seeks to solve a puzzle by guessing the letters of a secret word one at a time. The game is based on Python (This is a learning project).
@@ -16,5 +16,23 @@ Jumper is a game in which the player seeks to solve a puzzle by guessing the let
 ## How to start the game?
 - Need updated python
 - Go to main.py and run it
+- Also, you can run the program from an IDE like Visual Studio Code. Start your IDE and open the project folder.
 
-Have Fun!
+## Project Structure
+The project files and folders are organized as follows:
+```
+root                    (project root folder)
++-- cse230-03           (source code for game)
+  +-- game              (specific classes)
+    +-- main.py         (program entry point)
+    +-- game.py         (game code)
+    +-- player.py       (player code)
+    +-- puzzle.py       (words code)
+    +-- parachute.py    (parachute display)
+  +-- README.md       (general info)
+
+# Authors
+* Julieta White (gitHub: juliwhite)
+* Teddy Tjoe (gitHub: TeddyTjoe1990)
+* Cait Bair (gitHub: PureUrsa )
+* John Adeloye (gitHub: delodcyber)

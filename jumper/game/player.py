@@ -1,4 +1,3 @@
-
 class Player:
     '''
     The player will guess a letter from a-z
@@ -10,5 +9,10 @@ class Player:
         return self._player_input
     
     def set_input(self, letter):
+
         self._player_input = letter.lower()
+        #print(self._player_input + " set")
+
+       
     
+

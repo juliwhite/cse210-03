@@ -1,4 +1,3 @@
-
 class Parachute:
     '''
     This class create a human body with a parachute.
@@ -76,4 +75,5 @@ class Parachute:
             print(' /|\\')
             print(' / \\')
             print()
+
             print('^^^^^')

@@ -1,4 +1,3 @@
-
 from player import Player
 from puzzle import Word
 from parachute import Parachute
@@ -30,8 +29,7 @@ class Game:
         while self._play_game:
             self._do_output()
             self._get_input()
-            self._do_update()
-        
+            self._do_update()        
 
     def _do_output(self):
         '''
@@ -46,6 +44,10 @@ class Game:
         self._player.set_input(ask_player)
     
     def _do_update(self):
+
+        self._word._check_word(self._player.get_input())
+        self._parachute._body(self._word._get_wrong_guesses())
+        if self._word._check_win() == 1:
         '''
         It will keep asking the user for an input letter and display answer. 
         '''
