@@ -1,5 +1,5 @@
-from colorama import Fore
 import random
+from colorama import Fore
 
 words = ["love", "family", "home", "smile"]
 
@@ -36,3 +36,4 @@ class Word:
         if '_' not in self._right_guesses:
             print(f'{Fore.LIGHTGREEN_EX}Correct!')
             return 1
+

@@ -75,4 +75,5 @@ class Parachute:
             print(' /|\\')
             print(' / \\')
             print()
+
             print('^^^^^')
